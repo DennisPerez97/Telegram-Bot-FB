@@ -7,7 +7,7 @@ const explorers = JSON.parse(rawdata);
 
 // Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => 
- explorer.mission == "node")
+    explorer.mission == "node");
 //console.log(explorersInNode)
 //console.log(explorersInNode.length)
 
@@ -71,13 +71,13 @@ const explorersInNodeAndFizzBuzzTrick = explorersInNode.map((explorer) => assign
 const explorersInNodeAll = explorersInNode.map((explorer) => {
 
     if(assignFizzBuzzTrick(explorer).trick != explorer.score){
-        console.log("entra a fizzbuzz")
-        return assignBuzzTrick(explorer)
+        console.log("entra a fizzbuzz");
+        return assignBuzzTrick(explorer);
     }
     else if(assignBuzzTrick(explorer).trick != explorer.score){
-        return assignBuzzTrick(explorer)
+        return assignBuzzTrick(explorer);
     }
-    else {return assignFizzTrick(explorer)}
+    else {return assignFizzTrick(explorer);}
     
 });
 //console.log(explorersInNodeAll)

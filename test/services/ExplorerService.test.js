@@ -1,4 +1,4 @@
-const ExplorerService = require("./../../lib/services/ExplorerService")
+const ExplorerService = require("./../../lib/services/ExplorerService");
 
 describe("Test para ExplorerService",() =>{
     test("Requerimiento 1: Calcular todos los explorer en una mision",() => {
@@ -7,4 +7,4 @@ describe("Test para ExplorerService",() =>{
         expect(explorerByMission.length).toBe(0);
     });
 
-})
+});
