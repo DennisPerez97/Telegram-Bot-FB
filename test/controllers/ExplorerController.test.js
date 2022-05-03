@@ -21,23 +21,48 @@ describe("Test para ExplorerController",() =>{
     });
 });
 
+describe("Test para ExplorerController: getExplorersAmonutByMission",() =>{
+    test("Requerimiento 1: Probar el retorno de explorer por mision",() => {
+        expect(ExplorerController.getExplorersAmonutByMission("Node")).toBe(10);
+    });
+});
+describe("Test para ExplorerController:getExplorersAmonutByMission",() =>{
+    test("Requerimiento 2: Probar el retorno de explorer por mision con mision en blanco",() => {
+        expect(ExplorerController.getExplorersAmonutByMission("")).toBe(0);
+    });
+});
+describe("Test para ExplorerController:getExplorersAmonutByMission",() =>{
+    test("Requerimiento 3: Probar el retorno de explorer por mision con mision vacia",() => {
+        expect(ExplorerController.getExplorersAmonutByMission()).toBe(0);
+    });
+});
+describe("Test para ExplorerController:getExplorersAmonutByMission",() =>{
+    test("Requerimiento 4: Probar el retorno de explorer por mision con mision numerica",() => {
+        expect(ExplorerController.getExplorersAmonutByMission(4)).toBe(0);
+    });
+});
+
 describe("Test para ExplorerController: getExplorersUsernamesByMission",() =>{
     test("Requerimiento 1: Probar el retorno de explorer por mision",() => {
-        expect(ExplorerController.getExplorersUsernamesByMission("Node")).toBe(10);
+        const expected = ["ajolonauta1", "ajolonauta2", "ajolonauta3", "ajolonauta4", "ajolonauta5", "ajolonauta11", "ajolonauta12", "ajolonauta13", "ajolonauta14", "ajolonauta15"];
+        expect(ExplorerController.getExplorersUsernamesByMission("Node")).toEqual(expect.arrayContaining(expected));
     });
 });
 describe("Test para ExplorerController:getExplorersUsernamesByMission",() =>{
     test("Requerimiento 2: Probar el retorno de explorer por mision con mision en blanco",() => {
-        expect(ExplorerController.getExplorersUsernamesByMission("")).toBe(0);
+        const expected = [];
+        expect(ExplorerController.getExplorersUsernamesByMission("")).toEqual(expect.arrayContaining(expected));
     });
 });
 describe("Test para ExplorerController:getExplorersUsernamesByMission",() =>{
     test("Requerimiento 3: Probar el retorno de explorer por mision con mision vacia",() => {
-        expect(ExplorerController.getExplorersUsernamesByMission()).toBe(0);
+        const expected = [];
+        expect(ExplorerController.getExplorersUsernamesByMission()).toEqual(expect.arrayContaining(expected));
     });
 });
 describe("Test para ExplorerController:getExplorersUsernamesByMission",() =>{
     test("Requerimiento 4: Probar el retorno de explorer por mision con mision numerica",() => {
-        expect(ExplorerController.getExplorersUsernamesByMission(4)).toBe(0);
+        const expected = [];
+        expect(ExplorerController.getExplorersUsernamesByMission(4)).toEqual(expect.arrayContaining(expected));
     });
 });
