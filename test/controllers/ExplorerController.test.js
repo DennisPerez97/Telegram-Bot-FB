@@ -1,5 +1,9 @@
 const ExplorerController = require("./../../lib/controllers/ExplorerController");
-
+describe("Test para ExplorerController:getExplorerByMsg",() =>{
+    test("Requerimiento 1: Probar el retorno de explorer por mision",() => {
+        expect(ExplorerController.getExplorerByMsg("Node")).toBe(10);
+    });
+});
 describe("Test para ExplorerController",() =>{
     test("Requerimiento 1: Probar el retorno de explorer por mision",() => {
         expect(ExplorerController.getExplorerByMission("Node").length).toBe(10);
